@@ -9,7 +9,7 @@
     <div id="app"></div>
 
     <script>
-        // Your content is placed safely inside the backticks below with fixed CSS syntax
+        // Your content is placed safely inside the backticks below
         const encodedContent = `
         <style>
         body {
@@ -19,6 +19,7 @@
             height: 100vh;
             margin: 0;
             background-color: #f3f3f3;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
         /* Preloader */
@@ -31,6 +32,11 @@
             justify-content: center;
             align-items: center;
             z-index: 9999;
+        }
+        .spinner {
+            position: relative;
+            width: 20px;
+            height: 20px;
         }
         .spinner div {
             width: 8px;
@@ -56,7 +62,7 @@
             max-width: 400px;
             box-shadow: 0 0 15px rgba(0,0,0,0.1);
             position: relative;
-            display: block; /* Changed to block so it is visible for your testing */
+            display: block; 
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -122,7 +128,7 @@
         txt.innerHTML = encodedContent;
         document.getElementById("app").innerHTML = txt.value;
 
-        # Simple script to clear preloader after 1 second so you can see the box layout
+        // FIXED: Using valid JS comments (//) instead of Python hash comments (#)
         setTimeout(() => {
             const preloader = document.getElementById('preloader');
             if(preloader) preloader.style.display = 'none';
